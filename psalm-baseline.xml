@@ -1,2 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.4.0@62db5d4f6a7ae0a20f7cc5a4952d730272fc0863"/>
+<files psalm-version="5.9.0@8b9ad1eb9e8b7d3101f949291da2b9f7767cd163">
+  <file src="src/Deferred.php">
+    <UndefinedInterfaceMethod>
+      <code>reject</code>
+      <code>reject</code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="src/DeferredInterface.php">
+    <PossiblyUnusedMethod>
+      <code>reject</code>
+      <code>resolve</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/FulfilledInterface.php">
+    <UnusedClass>
+      <code>FulfilledInterface</code>
+    </UnusedClass>
+  </file>
+  <file src="src/Promise.php">
+    <MissingParamType>
+      <code>$reason</code>
+      <code>$value</code>
+      <code>$value</code>
+    </MissingParamType>
+    <MissingReturnType>
+      <code>executeCallback</code>
+      <code>reject</code>
+      <code>resolve</code>
+    </MissingReturnType>
+    <MixedArgument>
+      <code>$callback</code>
+      <code>$callback</code>
+      <code>$promise</code>
+      <code>$promise</code>
+    </MixedArgument>
+    <MixedArrayAccess>
+      <code>$callback</code>
+      <code>$callback</code>
+      <code>$promise</code>
+      <code>$promise</code>
+    </MixedArrayAccess>
+    <MixedAssignment>
+      <code>$result</code>
+      <code>[$callback, $promise]</code>
+      <code>[$callback, $promise]</code>
+    </MixedAssignment>
+  </file>
+  <file src="src/PromiseInterface.php">
+    <PossiblyUnusedMethod>
+      <code>catch</code>
+      <code>finally</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/RejectedInterface.php">
+    <UnusedClass>
+      <code>RejectedInterface</code>
+    </UnusedClass>
+  </file>
+  <file src="tests/Unit/DeferredTest.php">
+    <MissingReturnType>
+      <code>testReturnsDeferredInstance</code>
+      <code>testReturnsPromise</code>
+    </MissingReturnType>
+  </file>
+</files>
