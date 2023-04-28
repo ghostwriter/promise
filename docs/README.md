@@ -1,3 +1,3 @@
-# WIP
+# Promise Documentation
 
 here be dragons...
