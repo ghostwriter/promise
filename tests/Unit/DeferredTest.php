@@ -42,6 +42,7 @@ final class DeferredTest extends TestCase
 
     public function testRejectPromise(): void
     {
+        $this->deferred->reject(new RuntimeException('fail.'));
         $this->deferred->getPromise()
             ->then(
                 static function (mixed $value): void {
@@ -51,7 +52,6 @@ final class DeferredTest extends TestCase
                     self::assertSame('fail.', $throwable->getMessage());
                 }
             );
-        $this->deferred->reject(new RuntimeException('fail.'));
     }
 
     public function testResolvePromise(): void
@@ -62,8 +62,8 @@ final class DeferredTest extends TestCase
             ->then(
                 static function (mixed $value): void {
                     self::assertTrue($value);
-                    self::assertFalse($value);
-                    self::assertSame('wth?', $value);
+                    //                    self::assertFalse($value);
+                    //                    self::assertSame('wth?', $value);
                 },
                 static function (Throwable $throwable): void {
                     self::fail($throwable->getMessage());
