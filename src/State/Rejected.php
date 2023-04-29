@@ -17,4 +17,9 @@ final class Rejected implements RejectedInterface
     {
         return $this->throwable;
     }
+
+    public function getValue(): mixed
+    {
+        return $this->throwable;
+    }
 }
