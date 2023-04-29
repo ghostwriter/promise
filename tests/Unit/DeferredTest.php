@@ -48,7 +48,7 @@ final class DeferredTest extends TestCase
                 static function (mixed $value): void {
                     self::fail('Should not happen! got: ' . get_debug_type($value));
                 },
-                static function (Throwable $throwable): void {
+                static function (Throwable $throwable): never {
                     self::assertSame('fail.', $throwable->getMessage());
                 }
             );
@@ -65,7 +65,7 @@ final class DeferredTest extends TestCase
                     //                    self::assertFalse($value);
                     //                    self::assertSame('wth?', $value);
                 },
-                static function (Throwable $throwable): void {
+                static function (Throwable $throwable): never {
                     self::fail($throwable->getMessage());
                 }
             );
