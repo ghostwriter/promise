@@ -1,66 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.9.0@8b9ad1eb9e8b7d3101f949291da2b9f7767cd163">
   <file src="src/Deferred.php">
-    <UndefinedInterfaceMethod>
-      <code>reject</code>
-      <code>reject</code>
-    </UndefinedInterfaceMethod>
-  </file>
-  <file src="src/DeferredInterface.php">
-    <PossiblyUnusedMethod>
-      <code>reject</code>
-      <code>resolve</code>
-    </PossiblyUnusedMethod>
-  </file>
-  <file src="src/FulfilledInterface.php">
-    <UnusedClass>
-      <code>FulfilledInterface</code>
-    </UnusedClass>
+    <UnevaluatedCode>
+      <code><![CDATA[return $this->promise->then(
+            fn (mixed $value): mixed => $this->resolve($value),
+            fn (Throwable $reason): mixed => $this->reject($reason)
+        );]]></code>
+    </UnevaluatedCode>
   </file>
   <file src="src/Promise.php">
-    <MissingParamType>
-      <code>$reason</code>
-      <code>$value</code>
-      <code>$value</code>
-    </MissingParamType>
-    <MissingReturnType>
-      <code>executeCallback</code>
-      <code>reject</code>
-      <code>resolve</code>
-    </MissingReturnType>
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[self<Throwable|TPromise|TResult>]]></code>
+    </ImplementedReturnTypeMismatch>
+    <InvalidArgument>
+      <code><![CDATA[$this->fulfilledCallbacks]]></code>
+    </InvalidArgument>
+    <InvalidDocblock>
+      <code>public function __construct(</code>
+      <code>public function then(Closure $onFulfilled, Closure $onRejected): self</code>
+    </InvalidDocblock>
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[$this->finallyCallbacks]]></code>
+      <code><![CDATA[$this->rejectedCallbacks]]></code>
+    </InvalidPropertyAssignmentValue>
+    <MismatchingDocblockParamType>
+      <code>null|Closure(Throwable|TPromise):TResult</code>
+    </MismatchingDocblockParamType>
     <MixedArgument>
-      <code>$callback</code>
-      <code>$callback</code>
-      <code>$promise</code>
-      <code>$promise</code>
+      <code><![CDATA[match (true) {
+                $state instanceof FulfilledInterface => $state->getValue(),
+                $state instanceof RejectedInterface => $state->getReason(),
+            }]]></code>
     </MixedArgument>
-    <MixedArrayAccess>
-      <code>$callback</code>
-      <code>$callback</code>
-      <code>$promise</code>
-      <code>$promise</code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code>$result</code>
-      <code>[$callback, $promise]</code>
-      <code>[$callback, $promise]</code>
-    </MixedAssignment>
+    <MixedArgumentTypeCoercion>
+      <code>$onRejected</code>
+      <code><![CDATA[$this->rejectedCallbacks]]></code>
+    </MixedArgumentTypeCoercion>
+    <MixedInferredReturnType>
+      <code>Throwable</code>
+    </MixedInferredReturnType>
+    <MixedMethodCall>
+      <code>then</code>
+    </MixedMethodCall>
+    <MixedPropertyTypeCoercion>
+      <code><![CDATA[$this->fulfilledCallbacks]]></code>
+    </MixedPropertyTypeCoercion>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->result]]></code>
+    </MixedReturnStatement>
+    <PossiblyInvalidArgument>
+      <code>$onFulfilled</code>
+    </PossiblyInvalidArgument>
+    <PossiblyInvalidDocblockTag>
+      <code>@var Closure(TPromise):null|TSuccessResult</code>
+      <code>@var Closure(Throwable):null|never</code>
+    </PossiblyInvalidDocblockTag>
+    <PossiblyNullFunctionCall>
+      <code><![CDATA[$callback(match (true) {
+                $state instanceof FulfilledInterface => $state->getValue(),
+                $state instanceof RejectedInterface => $state->getReason(),
+            })]]></code>
+    </PossiblyNullFunctionCall>
+    <PossiblyUnusedMethod>
+      <code>all</code>
+      <code>any</code>
+      <code>getState</code>
+      <code>race</code>
+    </PossiblyUnusedMethod>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->result]]></code>
+      <code><![CDATA[$this->result]]></code>
+    </UndefinedThisPropertyFetch>
+    <UnusedParam>
+      <code>$promises</code>
+      <code>$promises</code>
+      <code>$promises</code>
+    </UnusedParam>
+    <UnusedProperty>
+      <code>$canceller</code>
+      <code>$resolver</code>
+    </UnusedProperty>
   </file>
   <file src="src/PromiseInterface.php">
     <PossiblyUnusedMethod>
       <code>catch</code>
       <code>finally</code>
+      <code>getReason</code>
+      <code>getResult</code>
+      <code>isFulfilled</code>
+      <code>isPending</code>
+      <code>isRejected</code>
+      <code>map</code>
+      <code>wait</code>
     </PossiblyUnusedMethod>
   </file>
-  <file src="src/RejectedInterface.php">
-    <UnusedClass>
-      <code>RejectedInterface</code>
-    </UnusedClass>
+  <file src="src/State/Fulfilled.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$this->value]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code>TFulfilled</code>
+    </InvalidReturnType>
+  </file>
+  <file src="src/State/Pending.php">
+    <PossiblyUnusedMethod>
+      <code>getValue</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/State/Rejected.php">
+    <PossiblyUnusedMethod>
+      <code>getValue</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="tests/Unit/DeferredTest.php">
-    <MissingReturnType>
-      <code>testReturnsDeferredInstance</code>
-      <code>testReturnsPromise</code>
-    </MissingReturnType>
+    <DocblockTypeContradiction>
+      <code>assertTrue</code>
+    </DocblockTypeContradiction>
   </file>
 </files>
