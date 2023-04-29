@@ -8,9 +8,26 @@ use Throwable;
 
 interface DeferredInterface
 {
-    public function promise(): PromiseInterface;
+    /**
+     * Returns a Promise for the completion of the deferred task.
+     *
+     * @template TPromise
+     *
+     * @return PromiseInterface<Throwable|TPromise>
+     */
+    public function getPromise(): PromiseInterface;
 
-    public function reject(Throwable $reason): void;
+    /**
+     * Rejects the promise with an error.
+     */
+    public function reject(Throwable $throwable): void;
 
+    /**
+     * Fulfills the promise with a value.
+     *
+     * @template TValue
+     *
+     * @param TValue $value
+     */
     public function resolve(mixed $value): void;
 }
