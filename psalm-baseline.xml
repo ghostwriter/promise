@@ -17,7 +17,6 @@
     </InvalidArgument>
     <InvalidDocblock>
       <code>public function __construct(</code>
-      <code>public function then(Closure $onFulfilled, Closure $onRejected): self</code>
     </InvalidDocblock>
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->finallyCallbacks]]></code>
@@ -116,5 +115,8 @@
     <DocblockTypeContradiction>
       <code>assertTrue</code>
     </DocblockTypeContradiction>
+    <InvalidReturnType>
+      <code>never</code>
+    </InvalidReturnType>
   </file>
 </files>
