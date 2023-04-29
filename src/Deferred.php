@@ -13,18 +13,29 @@ final class Deferred implements DeferredInterface
     ) {
     }
 
-    public function promise(): PromiseInterface
+    public function getPromise(): PromiseInterface
     {
+        /**
+         * @template TValue
+         *
+         * @param TValue $value
+         *
+         * @return TValue
+         */
         return $this->promise;
+        return $this->promise->then(
+            fn (mixed $value): mixed => $this->resolve($value),
+            fn (Throwable $reason): mixed => $this->reject($reason)
+        );
     }
 
-    public function reject(Throwable $reason): void
+    public function reject(Throwable $throwable): void
     {
-        $this->promise->reject($reason);
+        $this->promise->reject($throwable);
     }
 
     public function resolve(mixed $value): void
     {
-        $this->promise->reject($value);
+        $this->promise->resolve($value);
     }
 }
