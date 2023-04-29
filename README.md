@@ -27,7 +27,7 @@ composer require ghostwriter/promise
 ```php
 $deferred = new Ghostwriter\Promise\Deferred();
 
-$promise = $deferred->promise();
+$promise = $deferred->getPromise();
 
 /** @var mixed $value */
 $value = '#BlackLivesMatter';
