@@ -2,6 +2,7 @@
 
 [![Compliance](https://github.com/ghostwriter/promise/actions/workflows/compliance.yml/badge.svg)](https://github.com/ghostwriter/promise/actions/workflows/compliance.yml)
 [![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/promise?color=8892bf)](https://www.php.net/supported-versions)
+[![Mutation Coverage](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fghostwriter%2Fpromise%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/ghostwriter/promise/main)
 [![Code Coverage](https://codecov.io/gh/ghostwriter/promise/branch/main/graph/badge.svg)](https://codecov.io/gh/ghostwriter/promise)
 [![Type Coverage](https://shepherd.dev/github/ghostwriter/promise/coverage.svg)](https://shepherd.dev/github/ghostwriter/promise)
 [![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/promise)](https://packagist.org/packages/ghostwriter/promise)
