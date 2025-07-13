@@ -2696,12 +2696,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "a83b3f9a8566658ec0825e9ef4b06f4b6112ab60"
+                "reference": "13fd1073fa6bb72971db5eac7cb1519744fb3fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/a83b3f9a8566658ec0825e9ef4b06f4b6112ab60",
-                "reference": "a83b3f9a8566658ec0825e9ef4b06f4b6112ab60",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/13fd1073fa6bb72971db5eac7cb1519744fb3fc2",
+                "reference": "13fd1073fa6bb72971db5eac7cb1519744fb3fc2",
                 "shasum": ""
             },
             "require": {
@@ -2845,7 +2845,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-12T00:31:51+00:00"
+            "time": "2025-07-13T08:10:12+00:00"
         },
         {
             "name": "ghostwriter/psr-phpunit-assertions",
@@ -2853,12 +2853,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/psr-phpunit-assertions.git",
-                "reference": "3052b8d492a8b349732b5ceb6e06366bced1ec01"
+                "reference": "b678441c7b9138f1b29b70f66eba6330033e2a77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/3052b8d492a8b349732b5ceb6e06366bced1ec01",
-                "reference": "3052b8d492a8b349732b5ceb6e06366bced1ec01",
+                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/b678441c7b9138f1b29b70f66eba6330033e2a77",
+                "reference": "b678441c7b9138f1b29b70f66eba6330033e2a77",
                 "shasum": ""
             },
             "require": {
@@ -2938,7 +2938,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-13T07:25:53+00:00"
+            "time": "2025-07-13T10:02:52+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
