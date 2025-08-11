@@ -3,7 +3,6 @@
   "description": "[WIP] Promise implementation for PHP"
   "homepage": "https://github.com/ghostwriter/promise"
   "topics": "ghostwriter, promise, wip"
-  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
