@@ -1,11 +1,11 @@
 {
-    "name": "ghostwriter/wip",
-    "description": "Here be dragons",
+    "name": "ghostwriter/promise",
+    "description": "Promise implementation for PHP",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
-        "wip"
+        "promise"
     ],
     "authors": [
         {
@@ -15,12 +15,12 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/wip",
+    "homepage": "https://github.com/ghostwriter/promise",
     "support": {
-        "issues": "https://github.com/ghostwriter/wip/issues",
-        "source": "https://github.com/ghostwriter/wip",
-        "rss": "https://github.com/ghostwriter/wip/releases.atom",
-        "security": "https://github.com/ghostwriter/wip/security/advisories/new"
+        "issues": "https://github.com/ghostwriter/promise/issues",
+        "source": "https://github.com/ghostwriter/promise",
+        "rss": "https://github.com/ghostwriter/promise/releases.atom",
+        "security": "https://github.com/ghostwriter/promise/security/advisories/new"
     },
     "funding": [
         {
@@ -68,12 +68,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\Wip\\": "src"
-        },
-        "files": [
-            "src/constants.php",
-            "src/functions.php"
-        ]
+            "Ghostwriter\\Promise\\": "src"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -86,10 +82,6 @@
             "/tests/"
         ]
     },
-    "bin": [
-        "bin/console",
-        "bin/console.php"
-    ],
     "config": {
         "allow-plugins": {
             "ghostwriter/coding-standard": true
